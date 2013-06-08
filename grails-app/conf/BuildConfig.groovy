@@ -38,6 +38,7 @@ grails.project.dependency.resolution = {
 
         runtime 'mysql:mysql-connector-java:5.1.22'
         compile 'jp.sf.amateras.mirage:mirage:1.1.6'
+        test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
     }
 
     plugins {
@@ -51,11 +52,12 @@ grails.project.dependency.resolution = {
         //runtime ":yui-minify-resources:0.1.5"
 
         build ":tomcat:$grailsVersion"
-
         runtime ":database-migration:1.3.2"
-
         compile ':cache:1.0.1'
 
         compile ':improx:0.2'
+        test(":spock:0.7") {
+            exclude "spock-grails-support"
+        }
     }
 }
