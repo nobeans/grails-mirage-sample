@@ -36,7 +36,7 @@ class CustomerServiceSpec extends IntegrationSpec {
         Customer.count() == 3
     }
 
-    void "既存Txがあると、update()はレコードを1つ新規追加する"() {
+    void "既存Txありの場合、実装によってはTxがコミットされるまでGORM経由のアクセスでMirageの変更結果が見えなくなることもあるが、今の実装は問題ない"() {
         given:
         assert Customer.count() == 2
 
