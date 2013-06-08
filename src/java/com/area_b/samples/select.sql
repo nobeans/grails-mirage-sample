@@ -1,5 +1,8 @@
 select
-c.id
+  c.id
 , c.name
 from
-CUSTOMER c;
+  CUSTOMER c
+order by
+  id
+;
