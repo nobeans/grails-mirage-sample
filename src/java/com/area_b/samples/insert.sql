@@ -1,1 +1,1 @@
-INSERT INTO `customer`(`id`, `version`, `name`) VALUES (0, 1, 'new Jhone')
+INSERT INTO `customer`(`version`, `name`) VALUES (0, 'new Jhone')
